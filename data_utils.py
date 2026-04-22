@@ -14,6 +14,23 @@ models = [
     "SPOT-RNA"
 ]
 
+def model_type_map(model):
+    physics_models =    ["ContextFold", "ContraFold", "EternaFold", "IPKnot", "NeuralFold"]
+    empirical_models =  ["NUPACK", "RNAFold", "RNAStructure", "pKnots", "Simfold"]
+    ml_models =         ["MXFold", "MXFold2", "SPOT-RNA"]
+    if model in physics_models:
+        return "physics"
+    if model in empirical_models:
+        return "empirical"
+    if model in ml_models:
+        return "ML"
+
+def get_model_color(model):
+    mtype = model_type_map(model)
+    color_map = {"physics": "green", "empirical": "red", "ML": "blue"}
+    return color_map[mtype]
+
+
 pretty_attr_map = {
     'sequence_length': 'Sequence Length',
     'gc_content': 'GC-Content',
@@ -40,4 +57,12 @@ pretty_attr_map = {
     'average_au_pairs_of_helices': 'Average AU Pairs in Helices',
     'helices_with_reverse_compliment': 'Helices with Reverse Complements',
     'rate_of_gt_4_unpaired_nt_in_hairpin': 'Rate of >4 Unpaired Nucleotides in Hairpin'
+}
+
+chemical_mapping_datasets = {
+    "EternaData",
+    "Ribonanza",
+    "RNAndria mRNA",
+    "RNAndria pri-miRNA",
+    "YesselmanLab"
 }
