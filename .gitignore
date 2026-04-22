@@ -1,1 +1,5 @@
 __pycache__
+
+# Many of the data files are too big
+data/*
+*tar.gz
