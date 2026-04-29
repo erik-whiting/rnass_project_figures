@@ -1,0 +1,33 @@
+ContextFold: RNA Strand https://pmc.ncbi.nlm.nih.gov/articles/PMC2536673/
+    * Actual database link: https://rnasoft.ca/strand/
+    * Many of the sequences in RNA Strand are found in bp-RNA
+ContraFold: RNA Strand 1.3
+EternaFold:
+    * STRAND-S
+        * "same data used to train RNAsoft and CONTRAfold" (CONTRAfold not version 2.0)
+    * Cloud Lab datasets: Has a lot of data from RFAM
+IPKnot:
+    * Validation only, but uses RNA STRAND, pk168, and RFAM 10.0
+MXFold:
+    * TrainSetA: "Literature Derived from literature Dowell and Eddy (2004); Do et al. (2006); Andronescu et al. (2007); Lu et al. (2009); Andronescuet al. (2010)."
+    * TrainSetB: RFAM
+MXFold2:
+    * Same as MXFold2 but also with RNAStralign
+NeuralFold:
+    * Same as MXFold
+NUPACK:
+    * Not trained, based on Mathews et al. 1999 and Lu et al. 2006
+        * Additional parameters from Xia et al. 1998 and Zuker 2003
+pKnots:
+    * Tested on Sprinzl tRNA database, not really trained either
+    * Link: https://watermark02.silverchair.com/21-13-3011.pdf
+RNAFold:
+    * Based on Turner 2004 energy parameters
+    * Evaluated on non-pseudoknot RNAs from RNA STRAND
+RNAStructure:
+    * Same as RNAFold
+Simfold:
+    * RNA STRAND 2.0
+SPOT-RNA:
+    * bpRNA subset for initial training
+    * transfer learning based on another bpRNA subset
