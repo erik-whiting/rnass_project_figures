@@ -63,6 +63,5 @@ chemical_mapping_datasets = {
     "EternaData",
     "Ribonanza",
     "RNAndria mRNA",
-    "RNAndria pri-miRNA",
-    "YesselmanLab"
+    "RNAndria pri-miRNA"
 }
